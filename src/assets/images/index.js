@@ -1,0 +1,1 @@
+import blog-1 from './blog-1.jpg';
