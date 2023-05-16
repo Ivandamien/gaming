@@ -28,7 +28,7 @@ import shopImg1 from './shop-img-1.jpg';
 import shopImg2 from './shop-img-2.jpg';
 import shopImg3 from './shop-img-3.jpg';
 import titleUnderline from './title-underline.png';
-
+import ngameaLogo from './Ngamea_Logo-removebg.png';
 
 export {
     blog1,
@@ -60,6 +60,7 @@ export {
     shopImg1,
     shopImg2,
     shopImg3,
-    titleUnderline
-    
+    titleUnderline,
+    ngameaLogo
+
 }
