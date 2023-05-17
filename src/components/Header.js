@@ -29,7 +29,7 @@ const Header = () => {
   };
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 200) {
+      if (window.scrollY > 0) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -81,7 +81,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`header-bottom skewBg }`} data-header>
+      <div className={`header-bottom skewBg ${isScrolled ? 'active' : ''}`} data-header>
         <div className="container">
           <a href="/" className="logo">
             <img src={ngameaLogo} alt="" />
