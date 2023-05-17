@@ -1,39 +1,18 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ngameaLogo } from '../assets/images';
 import { CgClose, CgMenu, CgSearch } from 'react-icons/cg'
 const Header = () => {
-    const [isNavbarActive, setNavbarActive] = useState(false);
-    const [isSearchBoxActive, setSearchBoxActive] = useState(false);
-  
-    const handleNavbarToggle = () => {
-      setNavbarActive((prevState) => !prevState);
-    };
-  
-    const handleNavbarLinkClick = () => {
-      setNavbarActive(false);
-    };
-  
-    const handleSearchToggle = () => {
-      setSearchBoxActive((prevState) => !prevState);
-    };
-  
-    const handleScroll = () => {
-      if (window.scrollY >= 200) {
-        setNavbarActive(true);
-      } else {
-        setNavbarActive(false);
-      }
-    };
-  
-    // useEffect(() => {
-    //   window.addEventListener('scroll', handleScroll);
-    //   return () => {
-    //     window.removeEventListener('scroll', handleScroll);
-    //   };
-    // }, []);
+
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
+
+ 
   return (
-    <header className={`header ${isNavbarActive ? 'active' : ''}`}>
+    <header className={`header ${isActive ? 'active' : ''}`}>
       <div className="header-top">
         <div className="container">
           <div className="countdown-text">
@@ -43,7 +22,7 @@ const Header = () => {
           <div className="social-wrapper">
             <p className="social-title">Follow us on :</p>
             <ul className="social-list">
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              
               <li>
                 <a href="/" className="social-link">
                   <ion-icon name="logo-facebook"></ion-icon>
@@ -68,35 +47,35 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`header-bottom skewBg ${isNavbarActive ? 'active' : ''}`} data-header>
+      <div className={`header-bottom skewBg }`} data-header>
         <div className="container">
           <a href="/" className="logo">
             <img src={ngameaLogo} alt="" />
           </a>
-          <nav className="navbar" data-navbar>
+          <nav className={`navbar ${isActive ? 'active' : ''}`} data-navbar>
             <ul className="navbar-list">
               <li className="navbar-item">
-                <a href="#home" onClick={handleNavbarLinkClick} className="navbar-link skewBg">
+                <a href="#home"  className="navbar-link skewBg">
                   Home
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#live" onClick={handleNavbarLinkClick} className="navbar-link skewBg">
+                <a href="#live"  className="navbar-link skewBg">
                   Live
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#featured" onClick={handleNavbarLinkClick} className="navbar-link skewBg">
+                <a href="#featured"  className="navbar-link skewBg">
                   Featured
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#blog" onClick={handleNavbarLinkClick} className="navbar-link skewBg">
+                <a href="#blog"  className="navbar-link skewBg">
                   Blog
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#contact" onClick={handleNavbarLinkClick} className="navbar-link skewBg">
+                <a href="#contact"  className="navbar-link skewBg">
                   Contact
                 </a>
               </li>
@@ -111,22 +90,15 @@ const Header = () => {
             className="search-btn"
             aria-label="open search"
             data-search-toggler
-            onClick={handleSearchToggle}
+            
             >
               <CgSearch style={{ display: 'flex', alignItems:'center', justifyItems:'center', fontSize:'20px', fontWeight:'bold'}}/>
-            {/* <ion-icon name="search-outline" /> */}
+            
           </button>
-          <button
-            className="nav-toggle-btn "
-            aria-label="toggle menu"
-            data-nav-toggler
-            // onClick={handleNavbarToggle}
-          >
-              
-              <CgMenu className='menu' />
-              <CgClose className='close'/>
-             
-          </button>
+          <button className={`nav-toggle-btn ${isActive ? 'active' : ''}`} aria-label="toggle menu" onClick={toggleMenu}>
+            <CgMenu className="menu" style={{ display: isActive ? 'none' : 'block' }} />
+            <CgClose className="close" style={{ display: isActive ? 'block' : 'none' }} />
+          </button>            
         </div>
         </div>
       </div>
