@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import { ngameaLogo } from '../assets/images';
 import { CgClose, CgMenu, CgSearch } from 'react-icons/cg'
 import SearchBox from './SearchBox';
+import { useEffect } from 'react';
 const Header = () => {
 
   const [isActive, setIsActive] = useState(false);
-
+  const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
@@ -26,8 +27,26 @@ const Header = () => {
   const handleSearchClose = () => {
     setIsSearchBoxActive(false);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 200) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
   return (
-    <header className={`header ${isActive ? 'active' : ''}`}>
+    <header className={`header ${isActive ? 'active' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-top">
         <div className="container">
           <div className="countdown-text">
