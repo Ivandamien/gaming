@@ -1,10 +1,12 @@
 import React from 'react'
 import Header from '../components/Header'
+import SearchBox from '../components/SearchBox'
 
 const Home = () => {
   return (
-      <div>
-          <Header/>
+    <div>
+      <Header />
+      <SearchBox/>
     </div>
   )
 }

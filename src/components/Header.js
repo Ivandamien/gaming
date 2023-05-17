@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ngameaLogo } from '../assets/images';
 import { CgClose, CgMenu, CgSearch } from 'react-icons/cg'
+import SearchBox from './SearchBox';
 const Header = () => {
 
   const [isActive, setIsActive] = useState(false);
@@ -10,7 +11,21 @@ const Header = () => {
     setIsActive(!isActive);
   };
 
+  const handleLinkClick = () => {
+    if (isActive) {
+      setIsActive(false);
+    }
+  };
  
+  const [isSearchBoxActive, setIsSearchBoxActive] = useState(false);
+
+  const handleSearchToggle = () => {
+    setIsSearchBoxActive((prevState) => !prevState);
+  };
+
+  const handleSearchClose = () => {
+    setIsSearchBoxActive(false);
+  };
   return (
     <header className={`header ${isActive ? 'active' : ''}`}>
       <div className="header-top">
@@ -55,27 +70,27 @@ const Header = () => {
           <nav className={`navbar ${isActive ? 'active' : ''}`} data-navbar>
             <ul className="navbar-list">
               <li className="navbar-item">
-                <a href="#home"  className="navbar-link skewBg">
+                <a href="#home"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Home
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#live"  className="navbar-link skewBg">
+                <a href="#live"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Live
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#featured"  className="navbar-link skewBg">
+                <a href="#featured"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Featured
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#blog"  className="navbar-link skewBg">
+                <a href="#blog"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Blog
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#contact"  className="navbar-link skewBg">
+                <a href="#contact"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Contact
                 </a>
               </li>
@@ -87,10 +102,10 @@ const Header = () => {
             <span className="cart-badge">0</span>
           </button>
           <button
-            className="search-btn"
+            className="search-btn" 
             aria-label="open search"
             data-search-toggler
-            
+            onClick={handleSearchToggle}
             >
               <CgSearch style={{ display: 'flex', alignItems:'center', justifyItems:'center', fontSize:'20px', fontWeight:'bold'}}/>
             
@@ -102,7 +117,8 @@ const Header = () => {
         </div>
         </div>
       </div>
-     
+      
+      <SearchBox isActive={isSearchBoxActive} onClose={handleSearchClose} />
     </header>
   );
 }
