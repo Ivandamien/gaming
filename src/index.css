@@ -344,9 +344,9 @@ body {
   font-family: var(--ff-oxanium);
   font-size: 3rem;
   font-weight: var(--fw-800); */
-  width: 160px;
-  aspect-ratio: auto 160 / 80;
-  height: 80px;
+  width: 115px;
+  aspect-ratio: auto 115 / 62;
+  height: 62px;
 }
 
 .header-actions {

@@ -1,10 +1,39 @@
-import React from 'react'
-import { ngameaLogo } from '../assets/images'
 
+import React, { useState, useEffect } from 'react';
+import { ngameaLogo } from '../assets/images';
+import { CgClose, CgMenu, CgSearch } from 'react-icons/cg'
 const Header = () => {
-
+    const [isNavbarActive, setNavbarActive] = useState(false);
+    const [isSearchBoxActive, setSearchBoxActive] = useState(false);
+  
+    const handleNavbarToggle = () => {
+      setNavbarActive((prevState) => !prevState);
+    };
+  
+    const handleNavbarLinkClick = () => {
+      setNavbarActive(false);
+    };
+  
+    const handleSearchToggle = () => {
+      setSearchBoxActive((prevState) => !prevState);
+    };
+  
+    const handleScroll = () => {
+      if (window.scrollY >= 200) {
+        setNavbarActive(true);
+      } else {
+        setNavbarActive(false);
+      }
+    };
+  
+    // useEffect(() => {
+    //   window.addEventListener('scroll', handleScroll);
+    //   return () => {
+    //     window.removeEventListener('scroll', handleScroll);
+    //   };
+    // }, []);
   return (
-    <header className="header">
+    <header className={`header ${isNavbarActive ? 'active' : ''}`}>
       <div className="header-top">
         <div className="container">
           <div className="countdown-text">
@@ -39,7 +68,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="header-bottom skewBg" data-header>
+      <div className={`header-bottom skewBg ${isNavbarActive ? 'active' : ''}`} data-header>
         <div className="container">
           <a href="/" className="logo">
             <img src={ngameaLogo} alt="" />
@@ -47,27 +76,27 @@ const Header = () => {
           <nav className="navbar" data-navbar>
             <ul className="navbar-list">
               <li className="navbar-item">
-                <a href="#home" className="navbar-link skewBg">
+                <a href="#home" onClick={handleNavbarLinkClick} className="navbar-link skewBg">
                   Home
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#live" className="navbar-link skewBg">
+                <a href="#live" onClick={handleNavbarLinkClick} className="navbar-link skewBg">
                   Live
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#featured" className="navbar-link skewBg">
+                <a href="#featured" onClick={handleNavbarLinkClick} className="navbar-link skewBg">
                   Featured
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#blog" className="navbar-link skewBg">
+                <a href="#blog" onClick={handleNavbarLinkClick} className="navbar-link skewBg">
                   Blog
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#contact" className="navbar-link skewBg">
+                <a href="#contact" onClick={handleNavbarLinkClick} className="navbar-link skewBg">
                   Contact
                 </a>
               </li>
@@ -82,20 +111,26 @@ const Header = () => {
             className="search-btn"
             aria-label="open search"
             data-search-toggler
-          >
-            <ion-icon name="search-outline" />
+            onClick={handleSearchToggle}
+            >
+              <CgSearch style={{ display: 'flex', alignItems:'center', justifyItems:'center', fontSize:'20px', fontWeight:'bold'}}/>
+            {/* <ion-icon name="search-outline" /> */}
           </button>
           <button
-            className="nav-toggle-btn"
+            className="nav-toggle-btn "
             aria-label="toggle menu"
             data-nav-toggler
+            // onClick={handleNavbarToggle}
           >
-            <ion-icon name="menu-outline" className="menu" />
-            <ion-icon name="close-outline" className="close" />
+              
+              <CgMenu className='menu' />
+              <CgClose className='close'/>
+             
           </button>
         </div>
         </div>
       </div>
+     
     </header>
   );
 }
