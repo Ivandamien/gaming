@@ -29,7 +29,11 @@ import shopImg2 from './shop-img-2.jpg';
 import shopImg3 from './shop-img-3.jpg';
 import titleUnderline from './title-underline.png';
 import ngameaLogo from './Ngamea_Logo-removebg.png';
-
+import luxCard from './lux_card.png';
+import hero1 from './hero1.png';
+import hero2 from './hero2.png';
+import hero3 from './hero3.png';
+import hero4 from './hero4.png';
 export {
     blog1,
     blog2,
@@ -61,6 +65,11 @@ export {
     shopImg2,
     shopImg3,
     titleUnderline,
-    ngameaLogo
+    ngameaLogo,
+    luxCard,
+    hero1,
+    hero2,
+    hero3,
+    hero4
 
 }
