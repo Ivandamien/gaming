@@ -8,6 +8,7 @@ import LiveMatch from '../components/LiveMatch'
 import FeaturedGame from '../components/FeaturedGame'
 import Shop from '../components/Shop'
 import Blog from '../components/Blog'
+import NewsLetter from '../components/NewsLetter'
 
 const Home = () => {
   return (
@@ -24,7 +25,9 @@ const Home = () => {
           </div>
           <FeaturedGame/>
           <Shop />
-          <Blog/>
+          <Blog />
+          <NewsLetter />
+          
         </article>
       </main>
     </div>
