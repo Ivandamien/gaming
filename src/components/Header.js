@@ -4,6 +4,7 @@ import { ngameaLogo } from '../assets/images';
 import { CgClose, CgMenu, CgSearch } from 'react-icons/cg'
 import SearchBox from './SearchBox';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 const Header = () => {
 
   const [isActive, setIsActive] = useState(false);
@@ -83,35 +84,35 @@ const Header = () => {
       </div>
       <div className={`header-bottom skewBg ${isScrolled ? 'active' : ''}`} data-header>
         <div className="container">
-          <a href="/" className="logo">
+          <Link href="/" className="logo">
             <img src={ngameaLogo} alt="" />
-          </a>
+          </Link>
           <nav className={`navbar ${isActive ? 'active' : ''}`} data-navbar>
             <ul className="navbar-list">
               <li className="navbar-item">
-                <a href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
+                <Link href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Home
-                </a>
+                </Link>
               </li>
               <li className="navbar-item">
-                <a href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
+                <Link href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Live
-                </a>
+                </Link>
               </li>
               <li className="navbar-item">
-                <a href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
+                <Link href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Featured
-                </a>
+                </Link>
               </li>
               <li className="navbar-item">
-                <a href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
+                <Link href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Blog
-                </a>
+                </Link>
               </li>
               <li className="navbar-item">
-                <a href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
+                <Link href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
