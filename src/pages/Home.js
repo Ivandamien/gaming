@@ -4,6 +4,7 @@ import SearchBox from '../components/SearchBox'
 import Hero from '../components/Hero'
 import Brand from '../components/Brand'
 import LatestGame from '../components/LatestGame'
+import LiveMatch from '../components/LiveMatch'
 
 const Home = () => {
   return (
@@ -15,7 +16,8 @@ const Home = () => {
           <Hero />
           <Brand/>
           <div className="section-wrapper">
-            <LatestGame/>
+            <LatestGame />
+            <LiveMatch/>
           </div>
         </article>
       </main>
