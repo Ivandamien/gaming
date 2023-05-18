@@ -52,7 +52,7 @@ const Hero = () => {
           </p>
           <button className="btn skewBg">Read More</button>
         </div>
-        <Carousel images={carouselImages} />
+        {/* <Carousel images={carouselImages} /> */}
       </div>
     </section>
   );
