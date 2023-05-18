@@ -45,10 +45,10 @@ const Hero = () => {
         <div className="hero-content">
           <p className="hero-subtitle">World Gaming</p>
           <h1 className="h1 hero-title">
-            Create <span className="span">Manage</span> Matches
+            Ngamea <br /><span className="span">Games</span> 
           </h1>
           <p className="hero-text">
-            Find technology or people for digital projects in the public sector and find an individual specialist developer or researcher.
+            Find technology or people for digital projects and Join Other players for match making tournaments.
           </p>
           <button className="btn skewBg">Read More</button>
         </div>
