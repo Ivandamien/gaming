@@ -502,7 +502,7 @@ body {
 .hero-title { margin-block: 15px 12px; }
 
 .hero-text {
-  color: var(--marigold);
+  color: var(--white);
   margin-block-end: 45px;
 }
 
