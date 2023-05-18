@@ -1,10 +1,11 @@
 import React from 'react';
+import { blog1, blog2, blog3 } from '../assets/images';
 
 const Blog = () => {
   const articles = [
     {
       id: 1,
-      image: './assets/images/blog-1.jpg',
+      image: blog1,
       author: 'Admin',
       date: 'September 19, 2022',
       title: 'Shooter Action Video',
@@ -12,7 +13,7 @@ const Blog = () => {
     },
     {
       id: 2,
-      image: './assets/images/blog-2.jpg',
+      image: blog2,
       author: 'Admin',
       date: 'September 19, 2022',
       title: 'The Walking Dead',
@@ -20,7 +21,7 @@ const Blog = () => {
     },
     {
       id: 3,
-      image: './assets/images/blog-3.jpg',
+      image: blog3,
       author: 'Admin',
       date: 'September 19, 2022',
       title: 'Defense Of The Ancients',
@@ -48,7 +49,7 @@ const Blog = () => {
                   <ul className="card-meta-list">
                     <li className="card-meta-item">
                       <ion-icon name="person-outline"></ion-icon>
-                      <a href="#" className="item-text">{article.author}</a>
+                      <a href="/" className="item-text">{article.author}</a>
                     </li>
                     <li className="card-meta-item">
                       <ion-icon name="calendar-outline"></ion-icon>
@@ -56,12 +57,12 @@ const Blog = () => {
                     </li>
                   </ul>
                   <h3>
-                    <a href="#" className="card-title">{article.title}</a>
+                    <a href="/" className="card-title">{article.title}</a>
                   </h3>
                   <p className="card-text">
                     {article.excerpt}
                   </p>
-                  <a href="#" className="card-link">
+                  <a href="/" className="card-link">
                     <span className="span">Read More</span>
                     <ion-icon name="caret-forward"></ion-icon>
                   </a>
