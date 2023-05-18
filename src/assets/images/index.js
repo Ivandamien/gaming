@@ -35,6 +35,7 @@ import hero2 from './hero2.png';
 import hero3 from './hero3.png';
 import hero4 from './hero4.png';
 import liveMatchVideo from './live-match-video.mp4';
+import bgVideo from './bg-video.mp4';
 export {
     blog1,
     blog2,
@@ -72,6 +73,7 @@ export {
     hero2,
     hero3,
     hero4,
-    liveMatchVideo
+    liveMatchVideo,
+    bgVideo
 
 }
