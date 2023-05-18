@@ -1,11 +1,12 @@
-import React from 'react';
-import { liveMatchBanner, liveMatchPlayer1, liveMatchPlayer2 } from '../assets/images';
+
+import React, { useRef } from 'react';
+import { liveMatchPlayer1, liveMatchPlayer2, liveMatchVideo } from '../assets/images';
 
 const LiveMatch = () => {
   const liveMatches = [
     {
       id: 1,
-      bannerImage: liveMatchBanner,
+      video: liveMatchVideo,
       player1Image: liveMatchPlayer1,
       player2Image: liveMatchPlayer2,
       matchTime: '08:30',
@@ -13,6 +14,16 @@ const LiveMatch = () => {
     },
     // Add more live match objects as needed
   ];
+  const videoRef = useRef();
+
+  const handlePlayPause = () => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+  };
+  
 
   return (
     <section className="section live-match" id="live" aria-label="live match">
@@ -23,23 +34,21 @@ const LiveMatch = () => {
 
         {liveMatches.map((match) => (
           <div key={match.id} className="live-match-item">
-            <figure
-              className="live-match-banner img-holder"
-              style={{ '--width': '800px', '--height': '470px' }}
-            >
-              <img
-                src={match.bannerImage}
+            <div className="live-match-banner img-holder" style={{ '--width': '800px', '--height': '470px' }}>
+              <video
+                src={match.video}
                 width="800"
                 height="470"
-                loading="lazy"
-                alt={match.altText}
                 className="img-cover"
+                playsInline
+                preload="metadata"
+                ref={videoRef}
               />
 
-              <button className="play-btn" aria-label="play video">
+              <button className="play-btn" aria-label="play video" onClick={handlePlayPause}>
                 <ion-icon name="play"></ion-icon>
               </button>
-            </figure>
+            </div>
 
             <div className="live-match-player">
               <figure
