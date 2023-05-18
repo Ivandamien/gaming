@@ -9,6 +9,7 @@ import FeaturedGame from '../components/FeaturedGame'
 import Shop from '../components/Shop'
 import Blog from '../components/Blog'
 import NewsLetter from '../components/NewsLetter'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ const Home = () => {
           
         </article>
       </main>
+      <Footer/>
     </div>
   )
 }
