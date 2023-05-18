@@ -5,6 +5,7 @@ import Hero from '../components/Hero'
 import Brand from '../components/Brand'
 import LatestGame from '../components/LatestGame'
 import LiveMatch from '../components/LiveMatch'
+import FeaturedGame from '../components/FeaturedGame'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
             <LatestGame />
             <LiveMatch/>
           </div>
+          <FeaturedGame/>
         </article>
       </main>
     </div>
