@@ -1,28 +1,29 @@
 import React from 'react';
+import { featuredGame1, featuredGame2, featuredGame3, featuredGame4, featuredGameIcon } from '../assets/images';
 
 const FeaturedGame = () => {
   const games = [
     {
       id: 1,
-      image: './assets/images/featured-game-1.jpg',
+      image: featuredGame1,
       title: 'Just for Gamers',
       platform: 'Playstation 5, Xbox'
     },
     {
       id: 2,
-      image: './assets/images/featured-game-2.jpg',
+      image: featuredGame2,
       title: 'Need for Speed',
       platform: 'Playstation 5, Xbox'
     },
     {
       id: 3,
-      image: './assets/images/featured-game-3.jpg',
+      image: featuredGame3,
       title: 'Egypt Hunting Gamers',
       platform: 'Playstation 5, Xbox'
     },
     {
       id: 4,
-      image: './assets/images/featured-game-4.jpg',
+      image: featuredGame4,
       title: 'Just for Gamers',
       platform: 'Playstation 5, Xbox'
     }
@@ -43,7 +44,7 @@ const FeaturedGame = () => {
                 </figure>
                 <div className="card-content">
                   <h3 className="h3">
-                    <a href="#" className="card-title" tabIndex="-1">
+                    <a href="/" className="card-title" tabIndex="-1">
                       {game.title}
                     </a>
                   </h3>
@@ -53,9 +54,9 @@ const FeaturedGame = () => {
                   </span>
                 </div>
                 <div className="card-content-overlay">
-                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt="" className="card-icon" />
+                  <img src={featuredGameIcon} width="36" height="61" loading="lazy" alt="" className="card-icon" />
                   <h3 className="h3">
-                    <a href="#" className="card-title">
+                    <a href="/" className="card-title">
                       {game.title}
                     </a>
                   </h3>
