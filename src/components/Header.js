@@ -89,27 +89,27 @@ const Header = () => {
           <nav className={`navbar ${isActive ? 'active' : ''}`} data-navbar>
             <ul className="navbar-list">
               <li className="navbar-item">
-                <a href="/home"  className="navbar-link skewBg" onClick={handleLinkClick}>
+                <a href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Home
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/live"  className="navbar-link skewBg" onClick={handleLinkClick}>
+                <a href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Live
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/featured"  className="navbar-link skewBg" onClick={handleLinkClick}>
+                <a href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Featured
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/blog"  className="navbar-link skewBg" onClick={handleLinkClick}>
+                <a href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Blog
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/contact"  className="navbar-link skewBg" onClick={handleLinkClick}>
+                <a href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
                   Contact
                 </a>
               </li>
