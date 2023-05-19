@@ -10,6 +10,7 @@ import Shop from '../components/Shop'
 import Blog from '../components/Blog'
 import NewsLetter from '../components/NewsLetter'
 import Footer from '../components/Footer'
+import Top from '../components/Top'
 
 const Home = () => {
   return (
@@ -31,7 +32,8 @@ const Home = () => {
           
         </article>
       </main>
-      <Footer/>
+      <Footer />
+      <Top/>
     </div>
   )
 }
