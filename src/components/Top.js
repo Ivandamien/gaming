@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import {  RiArrowUpSFill } from 'react-icons/ri';
 
 const Top = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -32,7 +33,7 @@ const Top = () => {
       data-back-top-btn
       onClick={handleScrollToTop}
     >
-      <ion-icon name="caret-up"></ion-icon>
+      <RiArrowUpSFill size={30} style={{ verticalAlign: 'middle' }} />
     </Link>
   );
 };
