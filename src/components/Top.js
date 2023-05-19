@@ -25,11 +25,15 @@ const Top = () => {
   };
 
   return (
-    showBackToTop && (
-      <Link to="#top" className="back-top-btn" aria-label="back to top" data-back-top-btn onClick={handleScrollToTop}>
-        <ion-icon name="caret-up"></ion-icon>
-      </Link>
-    )
+    <Link
+      to="#top"
+      className={`back-top-btn ${showBackToTop ? 'active' : ''}`}
+      aria-label="back to top"
+      data-back-top-btn
+      onClick={handleScrollToTop}
+    >
+      <ion-icon name="caret-up"></ion-icon>
+    </Link>
   );
 };
 
