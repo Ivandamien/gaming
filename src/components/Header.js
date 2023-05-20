@@ -51,8 +51,8 @@ const Header = () => {
       <div className="header-top">
         <div className="container">
           <div className="countdown-text">
-            Exclusive Black Friday ! offer{" "}
-            <span className="span skewBg">10</span>Days
+            Major Updates Comming Soon{" "}
+            <span className="span skewBg">393Days</span>Days
           </div>
           <div className="social-wrapper">
             <p className="social-title">Follow us on :</p>
