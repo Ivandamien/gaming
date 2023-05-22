@@ -150,13 +150,13 @@ ul {
 li {
 	list-style: none
 }
-p {
+/* p {
 	font-size: 15px;
 	font-weight: 500;
 	line-height: 28px;
 	color: #cbcbcb;
 	margin-bottom: 15px;
-}
+} */
 hr {
 	border-bottom: 1px solid #eceff8;
 	border-top: 0 none;
