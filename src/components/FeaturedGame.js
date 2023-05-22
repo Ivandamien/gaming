@@ -7,25 +7,25 @@ const FeaturedGame = () => {
       id: 1,
       image: featuredGame1,
       title: 'Just for Gamers',
-      platform: 'Playstation 5, Xbox'
+      platform: 'IOS,Android '
     },
     {
       id: 2,
       image: featuredGame2,
       title: 'Need for Speed',
-      platform: 'Playstation 5, Xbox'
+      platform: 'PC, web '
     },
     {
       id: 3,
       image: featuredGame3,
       title: 'Egypt Hunting Gamers',
-      platform: 'Playstation 5, Xbox'
+      platform: 'Playstation 5, Xbox, web'
     },
     {
       id: 4,
       image: featuredGame4,
-      title: 'Just for Gamers',
-      platform: 'Playstation 5, Xbox'
+      title: 'COMING Soon',
+      platform: 'Playstation 5, Xbox, Web, Ios, Android'
     }
   ];
 
@@ -33,7 +33,7 @@ const FeaturedGame = () => {
     <section className="section featured-game" id="features" aria-label="featured game">
       <div className="container">
         <h2 className="h2 section-title">
-          All Released <span className="span">Games</span>
+          Upcoming <span className="span">Games</span>
         </h2>
         <ul className="has-scrollbar">
           {games.map(game => (

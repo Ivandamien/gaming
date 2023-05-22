@@ -12,7 +12,7 @@ const Footer = () => {
                 
             </a>
             <p className="footer-text">
-            NgameaGames gaming and E-sports platform
+            Ngamea Games Gaming, Game Development and E-sports platform
             </p>
             <ul className="contact-list">
               <li className="contact-item">
@@ -23,12 +23,12 @@ const Footer = () => {
                   Address : PO Box W75 Street lan West new queens
                 </address>
               </li>
-              <li className="contact-item">
+              {/* <li className="contact-item">
                 <div className="contact-icon">
                   <ion-icon name="headset"></ion-icon>
                 </div>
                 <a href="tel:+241245654235" className="item-text">Phone : +24 1245 654 235</a>
-              </li>
+              </li> */}
               <li className="contact-item">
                 <div className="contact-icon">
                   <ion-icon name="mail-open"></ion-icon>
@@ -39,36 +39,36 @@ const Footer = () => {
           </div>
           <ul className="footer-list">
             <li>
-              <p className="footer-list-title">Products</p>
+              <p className="footer-list-title">Esports</p>
             </li>
             <li>
-              <a href="/" className="footer-link">Graphics (26)</a>
+              <a href="/" className="footer-link">Graphics </a>
             </li>
             <li>
-              <a href="/" className="footer-link">Backgrounds (11)</a>
+              <a href="/" className="footer-link">PlayStation 5 </a>
             </li>
             <li>
-              <a href="/" className="footer-link">Fonts (9)</a>
+              <a href="/" className="footer-link">XBox </a>
             </li>
             <li>
-              <a href="/" className="footer-link">Music (3)</a>
+              <a href="/" className="footer-link">Android / IOS</a>
             </li>
             <li>
-              <a href="/" className="footer-link">Photography (3)</a>
+              <a href="/" className="footer-link">WEB </a>
             </li>
           </ul>
           <ul className="footer-list">
             <li>
-              <p className="footer-list-title">Need Help?</p>
+              <p className="footer-list-title">Contact Us</p>
             </li>
             <li>
-              <a href="/" className="footer-link">Terms & Conditions</a>
+              <a href="/" className="footer-link">Home</a>
             </li>
             <li>
-              <a href="/" className="footer-link">Privacy Policy</a>
+              <a href="/" className="footer-link">Live/Esports</a>
             </li>
             <li>
-              <a href="/" className="footer-link">Refund Policy</a>
+              <a href="/" className="footer-link">Gamification</a>
             </li>
             <li>
               <a href="/" className="footer-link">Affiliate</a>

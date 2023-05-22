@@ -97,12 +97,12 @@ const Header = () => {
               </li>
               <li className="navbar-item">
                 <Link href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
-                  Live
+                  Live/Esports
                 </Link>
               </li>
               <li className="navbar-item">
                 <Link href="/"  className="navbar-link skewBg" onClick={handleLinkClick}>
-                  Featured
+                  Gamification
                 </Link>
               </li>
               <li className="navbar-item">
