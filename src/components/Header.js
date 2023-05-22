@@ -52,7 +52,7 @@ const Header = () => {
         <div className="container">
           <div className="countdown-text">
             Major Updates Comming Soon{" "}
-            <span className="span skewBg">393Days</span>Days
+            <span className="span skewBg">393</span>Days
           </div>
           <div className="social-wrapper">
             <p className="social-title">Follow us on :</p>
