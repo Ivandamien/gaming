@@ -26,8 +26,8 @@ const Home = () => {
             <LiveMatch/>
           </div>
           <FeaturedGame/>
-          <Shop />
-          <Blog />
+          {/* <Shop /> */}
+          {/* <Blog /> */}
           <NewsLetter />
           
         </article>
